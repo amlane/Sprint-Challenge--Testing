@@ -18,8 +18,8 @@ server.get("/games", (req, res) => {
 
 server.post("/games", (req, res) => {
   let { title, genre, releaseYear } = req.body;
-  if (!title || !genre || !releaseYear) {
-    return res.status(422).json({ message: "all fields required" });
+  if (!title || !genre) {
+    return res.status(422).json({ message: "title/genre fields required" });
   } else {
     Games.insert(req.body)
       .then(newGame => {
