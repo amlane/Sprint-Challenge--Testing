@@ -12,7 +12,7 @@ describe("games model tests", () => {
     it("should add a new game", async () => {
       await insert({
         title: "Donkey Kong",
-        genre: "Platform Game",
+        genre: "Platform",
         releaseYear: 1981
       });
       const games = await db("games");
@@ -22,7 +22,7 @@ describe("games model tests", () => {
       let game = {
         id: 2,
         title: "Katamari",
-        genre: "Puzzle Game",
+        genre: "Puzzle",
         releaseYear: 1981
       };
       const inserted = await insert(game);

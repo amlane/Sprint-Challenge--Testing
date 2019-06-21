@@ -45,7 +45,7 @@ describe("POST/games", () => {
   it("should return status 201 when is data is complete", async () => {
     let game = {
       title: "SuperMarioBros",
-      genre: "Platform game",
+      genre: "Platform",
       releaseYear: 1985
     };
 
@@ -58,7 +58,7 @@ describe("POST/games", () => {
   it("should return correct shape of object and db contraints", async () => {
     let game = {
       title: "SuperMarioBros",
-      genre: "Platform game",
+      genre: "Platform",
       releaseYear: 1985
     };
 
@@ -71,7 +71,7 @@ describe("POST/games", () => {
         expect(res.body[0]).toEqual({
           id: 1,
           title: "SuperMarioBros",
-          genre: "Platform game",
+          genre: "Platform",
           releaseYear: 1985
         });
       });
