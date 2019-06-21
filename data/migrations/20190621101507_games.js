@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
 
     game.string("genre", 128).notNullable();
 
-    game.string("releaseYear", 128);
+    game.integer("releaseYear", 128);
   });
 };
 
