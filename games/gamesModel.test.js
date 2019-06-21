@@ -5,6 +5,11 @@ describe("games model tests", () => {
   it("should be true", () => {
     expect(true).toBe(true);
   });
+
+  it("should set environment to testing", () => {
+    expect(process.env.DB_ENV).toBe("testing");
+  });
+
   describe("insert()", () => {
     beforeEach(async () => {
       await db("games").truncate();

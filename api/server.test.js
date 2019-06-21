@@ -23,7 +23,6 @@ it("should always return any array", () => {
   return supertest(server)
     .get("/games")
     .then(res => {
-      //   console.log("res", res);
       expect(Array.isArray(res.body)).toBeTruthy(); // If this is right then I'll be really happy
     });
 });
