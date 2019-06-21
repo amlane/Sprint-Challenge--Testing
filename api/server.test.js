@@ -23,8 +23,8 @@ it("should always return any array", () => {
   return supertest(server)
     .get("/games")
     .then(res => {
-      console.log("res", res);
-      expect(Array.isArray(res.body)).toBeTruthy();
+      //   console.log("res", res);
+      expect(Array.isArray(res.body)).toBeTruthy(); // If this is right then I'll be really happy
     });
 });
 
@@ -33,7 +33,7 @@ describe("POST/games", () => {
     await db("games").truncate();
   });
   it("should return a status code of 422 when data is incomplete", async () => {
-    let game = { title: "Street Fighter", genre: "", releaseYear: "" };
+    let game = { title: "Street Fighter", genre: "", releaseYear: 1991 };
 
     await supertest(server)
       .post("/games")
