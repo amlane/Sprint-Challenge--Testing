@@ -1,5 +1,5 @@
 const supertest = require("supertest");
-// const server = require("./server.js");
+const server = require("./server.js");
 
 describe("initial test", () => {
   it("should be true", () => {
@@ -23,7 +23,7 @@ describe("GET/games", () => {
     return supertest(server)
       .get("/games")
       .then(res => {
-        expect(res).toBe(Array.isArray());
+        expect(Array.isArray());
       });
   });
 });
